@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>cf第一次记录</title>
+    <url>/2024/10/09/2024-9-16%20cf%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>2024-9-16 cf第一次记录</p>
+<p>总是试图每晚写博客，但是一到晚上完全就是工作得很累的状态了啊……只想赶紧回宿舍睡觉了</p>
+<p>（今晚差点就关机了……坚持坚持坚持！）</p>
+<p>早上写多元笔记整理，下午填完了Mitacs的申请表，晚上<del>来回骑车十五公里去吃温泉蛋烧牛肉饭</del>改了一下20号答辩的PPT，只写了<del>两</del>三道题……明天一定！</p>
+<p>（看到下一题是自己尝试过但没写出来的题之后，兴奋了一下，拉回来自己又……看了一眼题解视频，嗯，就发现拿取是定序的，就悟了……之前怎么没发现呢？）</p>
+<p>现在做的都是那种差一点点就能做出来的题（！？）</p>
+<p>(不是我的插件怎么连markdown都能补全啊，而且补全的特别特别特别搞笑！笑醒了已经！你是我的生产力好帮手！)</p>
+<p><a href="https://codeforces.com/problemset/problem/2009/C">2009C - The Legend of Freya the Frog</a></p>
+<p>很简单，没啥意思。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> x, y, k;</span><br><span class="line">	cin &gt;&gt; x &gt;&gt; y &gt;&gt; k;</span><br><span class="line">	<span class="keyword">if</span> ((x / k + <span class="built_in">bool</span>(x % k)) &gt; (y / k + <span class="built_in">bool</span>(y % k))) cout &lt;&lt; <span class="number">2</span> * (x / k + <span class="built_in">bool</span>(x % k)) - <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; <span class="number">2</span> * (y / k + <span class="built_in">bool</span>(y % k)) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://codeforces.com/problemset/problem/2008/D">2008D - Sakurako’s Hobby</a></p>
+<p>（还会补全链接，妙啊）</p>
+<p>根据大学一年级开头的高等代数课，我们知道，一个轮换一定可以由k个环表示，环与环不想交。</p>
+<p>（所以你我为什么要建图！！只有一条路径，用一个数组就可以走完！）</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//void add(int a, int b)&#123;</span></span><br><span class="line"><span class="comment">//	e[idx] = b, ne[idx] = h[a], h[a] = idx++; </span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> depth)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(vis[x]) <span class="keyword">return</span> depth;</span><br><span class="line">	vis[x] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(ifblack[x]) depth += <span class="number">1</span>;</span><br><span class="line">	cnt[x] = <span class="built_in">find</span>(a[x], depth);</span><br><span class="line">	<span class="keyword">return</span> cnt[x];</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="built_in">memset</span>(ifblack, <span class="number">0</span>, <span class="keyword">sizeof</span> ifblack);</span><br><span class="line"><span class="comment">//	memset(h, -1, sizeof h);</span></span><br><span class="line">	<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span> vis);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		<span class="type">int</span> x;</span><br><span class="line">		cin &gt;&gt; x;</span><br><span class="line">		a[i] = x;</span><br><span class="line">	&#125;</span><br><span class="line">	string s; cin &gt;&gt; s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s[i] == <span class="string">&#x27;0&#x27;</span>) ifblack[i + <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(vis[i]) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="built_in">find</span>(i, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		cout &lt;&lt; cnt[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://codeforces.com/contest/1479/problem/C">C. Splitting Items</a></p>
+<p>是一道赛时没写出来的博弈，但实际是贪心。如果双方都想自己赢，最优策略是自己拿到最大的一个。但若从大到小排序，Alic会拿第一个，那么最大值是固定的，所以Bob只能从第二个开始暗搓搓给自己加餐，而且还不能加超过前一个，否则这个就会被Alic选走。</p>
+<p>注意边界，B不能超过A。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll n, k;</span><br><span class="line">	ll a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; c[i];</span><br><span class="line">	<span class="built_in">sort</span>(c, c + n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">		<span class="keyword">if</span>((n - i) % <span class="number">2</span> != <span class="number">0</span>) a += c[i];</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			ll tmp = <span class="built_in">min</span>(k, c[i + <span class="number">1</span>] - c[i]);</span><br><span class="line">			k -= tmp;</span><br><span class="line">			c[i] += tmp;</span><br><span class="line">			b += c[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">max</span>(a - b, <span class="number">0ll</span>) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cf刷题第二次记录</title>
+    <url>/2024/10/09/cf%E5%88%B7%E9%A2%98%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>昨天电脑拿去修了，明天早八，先这样。明天见！</p>
+<p><a href="https://codeforces.com/contest/2008/problem/F">2008F	Sakurako’s Box</a></p>
+<p>水题，期望值就是任取两个数相乘的和除以组合的数量。但是有很多细节要注意，比如mod相减要注意+mod，否则会出现负数；费马小定理求逆元的方法（我怎么感觉有的都没取逆元就过了）</p>
+<p>线性时间求 $ \sum{a_i \times a_j}$ 的方法，一是完全平方公式，即$\frac{(\sum{a_i})^2 - \sum{a ^2_i}}{2}$，二是$\frac{1}{2}a_i \times (s - a_i)$（仍然要注意这里也出现了模意义下的减号，应写作<code>(ans + a[i] * (sum - a[i] + mod) % mod) % mod</code>。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> ll mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">binpow</span><span class="params">(ll a, ll b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(b % <span class="number">2</span>) <span class="keyword">return</span>(a * <span class="built_in">binpow</span>(a, b<span class="number">-1</span>)) % mod;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">binpow</span>((a*a)%mod, b/<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	ll a[N], sum = <span class="number">0</span>, sumsq = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		sum = (sum + a[i]) % mod;</span><br><span class="line">		sumsq = (sumsq + a[i] * a[i]) % mod;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	sum = (sum * sum) % mod;</span><br><span class="line">	sum = (sum - sumsq - mod) % mod;</span><br><span class="line"><span class="comment">//做减法的时候记得补mod！！！！！否则前者模mod之后小于后者模mod，瞬间给你到去负数</span></span><br><span class="line">	sum = (sum * <span class="built_in">binpow</span>(<span class="number">2</span>, mod - <span class="number">2</span>)) % mod;</span><br><span class="line">	ll cnt = n * (n - <span class="number">1</span>) / <span class="number">2</span>; cnt %= mod;</span><br><span class="line">	cout &lt;&lt; (sum % mod) * <span class="built_in">binpow</span>(cnt, mod - <span class="number">2</span>) % mod &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> T;</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Day_6</title>
+    <url>/2024/10/14/Day-6/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>cf_day4</title>
+    <url>/2024/10/09/cf_day4/</url>
+    <content><![CDATA[<p><a href="https://codeforces.com/contest/1995/problem/C">C. Squaring</a></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> ll mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">ll a[N], op[N];</span><br><span class="line">ll n;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span> a); <span class="built_in">memset</span>(op, <span class="number">0</span>, <span class="keyword">sizeof</span> op);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i - <span class="number">1</span>] &gt; <span class="number">1</span> &amp;&amp; a[i] == <span class="number">1</span>)&#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;-1&quot;</span> &lt;&lt; endl;<span class="comment">//注意特判1的平方不可能增长</span></span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)&#123;</span><br><span class="line">		ll him = a[i - <span class="number">1</span>];</span><br><span class="line">		ll me = a[i];</span><br><span class="line">		ll extra = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(him != <span class="number">1</span> &amp;&amp; him * him &lt;= me) extra--, him *= him;</span><br><span class="line">		<span class="keyword">while</span>(me &lt; him) extra++, me *= me;</span><br><span class="line">		op[i] = <span class="built_in">max</span>(<span class="number">0ll</span>, op[i - <span class="number">1</span>] + extra);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	ll ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) ans += op[i];</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> T;</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cf刷题day3</title>
+    <url>/2024/10/09/cf%E5%88%B7%E9%A2%98day3/</url>
+    <content><![CDATA[<p><a href="https://codeforces.com/contest/2003/problem/D1">Codeforces Round 968 (Div. 2) Editorial</a></p>
+<p>有点思维，取两次mex那里有点不懂，其他的思维还是比较好理解。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> ll mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line">ll n, m, a[N];</span><br><span class="line"><span class="type">bool</span> vis[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	ll k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">		<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span> vis);</span><br><span class="line">		<span class="type">int</span> t;</span><br><span class="line">		cin &gt;&gt; t;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= t; i++)&#123;</span><br><span class="line">			cin &gt;&gt; a[i];</span><br><span class="line">			<span class="keyword">if</span>(a[i] &lt;= t + <span class="number">4</span>)&#123;</span><br><span class="line">				vis[a[i]] = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		ll mex = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(vis[mex])&#123;<span class="comment">//一种mex查找自动机，，，</span></span><br><span class="line">			++mex;</span><br><span class="line">		&#125;</span><br><span class="line">		vis[mex] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(vis[mex])&#123;</span><br><span class="line">			++mex;</span><br><span class="line">		&#125;</span><br><span class="line">		k = <span class="built_in">max</span>(k, mex);<span class="comment">//如果更大才更新</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(k &gt;= m) cout &lt;&lt; (m + <span class="number">1</span>) * k &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; k * k + (m + k) * (m - k + <span class="number">1</span>) / <span class="number">2</span> &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> T;</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dp_day2</title>
+    <url>/2024/10/03/dp-day2/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P3205">P3205 [HNOI2010] 合唱队</a></p>
+<p>我觉得不太好想……因为这个题不是正向推过去，而是逆向复原的状态数……</p>
+<ul>
+<li><p>每一个人只有从左边入队和从右边入队两种可能：</p>
+<ul>
+<li>若从左边入队，则第j个位置的人比他高，或第k个位置的人比他高</li>
+<li>若从右边入队，则第j个位置的人比他低，或第k个位置的人比他低</li>
+</ul>
+</li>
+</ul>
+<p>注意 ：</p>
+<ul>
+<li>队列中只有一个人的时候只有一种情况，而任何一个位置上的人都有可能第一个入队，不妨设他们是从左边入队的，那么所有dp[i][i][0]全部初始化为1</li>
+<li><strong>注意枚举顺序！！！！！！！！！</strong> 由于是小区间情况合并为大区间，所以枚举的顺序是区间长度由短至长，先枚举完长度为1的所有区间，再枚举长度为2、3、4……n的区间，第一层循环里的l就是区间长度。</li>
+</ul>
+<p>upd：10.4 睡了一大觉之后自己重新写了一遍，现在感觉比较理解得比较透彻了</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e3</span> + <span class="number">10</span>, mod = <span class="number">19650827</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[N],dp[N][N][<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) dp[i][i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> l = <span class="number">1</span>; l &lt; n; l++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)&#123;</span><br><span class="line">			<span class="type">int</span> j = i + l;</span><br><span class="line">			<span class="keyword">if</span>(a[i] &lt; a[i<span class="number">+1</span>]) dp[i][j][<span class="number">0</span>] += dp[i<span class="number">+1</span>][j][<span class="number">0</span>]; <span class="comment">//上一个从左侧进且比他高</span></span><br><span class="line">			<span class="keyword">if</span>(a[i] &lt; a[j]) dp[i][j][<span class="number">0</span>] += dp[i<span class="number">+1</span>][j][<span class="number">1</span>];<span class="comment">//上一个从右边进且比他高</span></span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt; a[j<span class="number">-1</span>]) dp[i][j][<span class="number">1</span>] += dp[i][j<span class="number">-1</span>][<span class="number">1</span>];<span class="comment">//上一个从右边进且比他矮</span></span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt; a[i]) dp[i][j][<span class="number">1</span>] += dp[i][j<span class="number">-1</span>][<span class="number">0</span>];<span class="comment">//上一个从左边进且比他矮</span></span><br><span class="line">			dp[i][j][<span class="number">0</span>] %= mod;</span><br><span class="line">			dp[i][j][<span class="number">1</span>] %= mod;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; (dp[<span class="number">1</span>][n][<span class="number">0</span>] + dp[<span class="number">1</span>][n][<span class="number">1</span>]) % mod;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>ACM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>假期计划</title>
+    <url>/2024/09/29/%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="十一假期计划"><a href="#十一假期计划" class="headerlink" title="十一假期计划"></a>十一假期计划</h1><p>如果不是周一要上线性模型，我们专业将拥有长达十一天的长假！</p>
+<p>甚至有同学来问我可不可以求老师调调课，但是我也有点没有理由，而且，我晚上还有公选（……）</p>
+<p>最近因为一些事情，学习停摆了三个月（……有点过分，但是很高兴我们将它结束了），目前处于光接活不干活的状态，趁这个假期，把积压的任务梳理和清理一下吧！</p>
+<h2 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h2><ul>
+<li>线性模型复习</li>
+<li>多元复习</li>
+<li>非参数统计复习</li>
+<li>多元作业<ul>
+<li>理论</li>
+<li>上机</li>
+</ul>
+</li>
+<li>非参作业</li>
+<li>开始做商务与经济统计的mooc</li>
+<li>预习多元并确定期末分析报告题目、找数据、前期处理和布置任务</li>
+<li>预习非参并为学期项目找合适的数据集</li>
+</ul>
+<h2 id="课外活动"><a href="#课外活动" class="headerlink" title="课外活动"></a>课外活动</h2><ul>
+<li>ACM（每天最起码得5题吧……我觉得……立flag了）</li>
+<li>准备雅思（开始做雅思真题，每天在群里打卡）</li>
+<li>准备申请材料</li>
+</ul>
+<h2 id="科研"><a href="#科研" class="headerlink" title="科研"></a>科研</h2><ul>
+<li>准备会同杯的第一次组会（读老师推荐的综述和主要论文，对方法和新思路有大致想法）</li>
+<li>准备大创组会（总结完自己分到的论文）</li>
+<li>完成经济学论文的代码复现工作</li>
+<li>读老师给的计算机视觉方面的论文并探索其数据集</li>
+</ul>
+<h2 id="非专业课"><a href="#非专业课" class="headerlink" title="非专业课"></a>非专业课</h2><ul>
+<li>完成实用粤语课程主题演讲的准备</li>
+<li>完成读西方文学名著的其中一本并完成期中论文（3000字以内真是防内卷神器啊……）</li>
+</ul>
+<p>今天希望可以复习完线性模型吧，然后多元开一点头，下午催一下经济学的数据集，读一下会同杯的论文，然后顺便刷下题，把昨天的比赛补了。晚上把大创的论文最好整理完。</p>
+]]></content>
+      <tags>
+        <tag>daily</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/10/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>cf_day5</title>
+    <url>/2024/10/04/cf-day5/</url>
+    <content><![CDATA[<h1 id="cf-day5"><a href="#cf-day5" class="headerlink" title="cf_day5"></a>cf_day5</h1><p>这几天忘记generate了，所以我的博客一直处在一种孤芳自赏的状态……</p>
+<p>专业课复习不完但是复习个一两个小时就复习不动……遂摸鱼写题</p>
+<h2 id="C-Bitwise-Balancing"><a href="#C-Bitwise-Balancing" class="headerlink" title="C. Bitwise Balancing"></a><a href="https://codeforces.com/problemset/problem/2020/C">C. Bitwise Balancing</a></h2><p>传说中的打表题……看看dalao们传说中的打表是怎么打的。</p>
+<p>位运算很容易联想到位之间的运算独立性，我以为这个减法会导致失去独立性的，然而独立性是存在的。</p>
+<p>因为显然不可能出现 <code>a|b</code> 为0而 <code>a&amp;b</code> 为1的情况，也就是说， <code>a|b</code> 的值不可能小于 <code>a&amp;c</code>，那么在这种情况下，减法不可能退位，那么也就不会出现某个位的预算影响其他位的情况。</p>
+<p>于是大家就愉快的枚举了所有的可能性，并打出来了一张表！（啊……？）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Analysisss/PictureBed@images/images/20241004211838.png" alt="20241004211838"></p>
+<p>然后就调整a使得d与预期一致，如果不行就break之。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll a = <span class="number">0</span>, b, c, d;</span><br><span class="line">	cin &gt;&gt; b &gt;&gt; c &gt;&gt; d;</span><br><span class="line">	ll pos = <span class="number">1</span>, bit_b = <span class="number">0</span>, bit_c = <span class="number">0</span>, bit_d = <span class="number">0</span>, mask = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; <span class="number">62</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(b &amp; mask) bit_b = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> bit_b = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(c &amp; mask) bit_c = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> bit_c = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(d &amp; mask) bit_d = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> bit_d = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>((bit_b &amp;&amp; (!bit_c) &amp;&amp;(!bit_d)) || ((!bit_b) &amp;&amp; bit_c &amp;&amp; bit_d))&#123;</span><br><span class="line">			pos = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(bit_b &amp;&amp; bit_c) a += (<span class="number">1ll</span> - bit_d) * mask;</span><br><span class="line">		<span class="keyword">else</span> a += bit_d * mask;</span><br><span class="line">		mask &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(pos) cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> T;</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>区间dp_1</title>
+    <url>/2024/10/02/%E5%8C%BA%E9%97%B4dp_1/</url>
+    <content><![CDATA[<h2 id="区间dp"><a href="#区间dp" class="headerlink" title="区间dp"></a>区间dp</h2><p>早上uicpc有个字符串删除的题，早就怀疑是区间dp（区间变化+猜时间复杂度）但一直没思路，早上仔细想了一下，设计了一下转移，然而调了一早上，调的很完美但还是不过，也造不出反例了。于是决定继续练区间dp。</p>
+<p><a href="https://www.luogu.com.cn/problem/P2858">P2858 [USACO06FEB] Treats for the Cows G&#x2F;S</a></p>
+<p>感觉自己想区间dp的思路一下变清晰了！两端出队的题目，枚举左右端点来代表区间即可，转移的话就从左端点或右端点未出队的情况开始即可。</p>
+<p>因为是从整个串慢慢删除到没有字符的，所以从两个端点在两侧的情况开始枚举~</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e3</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[N], dp[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; a[i];</span><br><span class="line">	dp[<span class="number">1</span>][n] = <span class="number">0</span>; dp[<span class="number">2</span>][n] = a[<span class="number">1</span>]; dp[<span class="number">1</span>][n<span class="number">-1</span>] = a[n];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = n; j &gt;= i; j--)&#123;</span><br><span class="line">			<span class="type">int</span> cnt = n + i - j - <span class="number">1</span>;</span><br><span class="line">			dp[i][j] = <span class="built_in">max</span>(dp[i - <span class="number">1</span>][j] + cnt * a[i - <span class="number">1</span>], dp[i][j + <span class="number">1</span>] + cnt * a[j + <span class="number">1</span>]);</span><br><span class="line">			<span class="comment">//cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; &quot; &quot; &lt;&lt; dp[i][j] &lt;&lt; endl;</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		ans = <span class="built_in">max</span>(ans, dp[i][i] + n * a[i]);</span><br><span class="line">	&#125;                                                               </span><br><span class="line">	cout &lt;&lt; ans;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>ACM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>codeforces Round975_Div2</title>
+    <url>/2024/09/28/codeforces-Round975-Div2/</url>
+    <content><![CDATA[<h1 id="codeforces-Round975-Div2"><a href="#codeforces-Round975-Div2" class="headerlink" title="codeforces Round975_Div2"></a>codeforces Round975_Div2</h1><p>这学期第一次在学校打cf，周五晚上九点半的场（喜，非常好时间，在外面打到十一点多再回去写一会，刚好还能趁着没停热水洗个澡）。501的网真好啊，开cf嘎嘎快（在家Div3能有两个小时都卡在外面，早忘记了如此丝滑的开题体验），遂rating+103。但是感觉2C和2E其实都是可做的，虽然没时间调就随便交了。下次继续！</p>
+<h2 id="A-Max-Plus-Size"><a href="#A-Max-Plus-Size" class="headerlink" title="A. Max Plus Size"></a><a href="https://codeforces.com/contest/2019/problem/A">A. Max Plus Size</a></h2><p>签到，没啥说的。一开始看错以为要求最大不相邻序列的和，于是dp之，测了样例才发现错的离谱（……）。</p>
+<p>实际情况只有两种，全取奇数位置的数和全取偶数位置的数，我猜这个取决于最大值在奇数位置还是偶数位置出现，直接加上奇数序列或偶数序列的长度即可。由于奇数序列和偶数序列长度最多只相差1，那么若最大值出现在奇数位置，则取$ 最大值+奇数序列长度 $，若最大值只出现在偶数序列，则取$ 最大值+偶数序列长度 $，比如样例[4, 5, 4]，尽管题目提示是取[4, 4]，但显然[5]也是合法方案，因为偶数序列长度虽然比奇数序列长度小1，但是只要最大值严格奇数位置的所有数字，就可以弥补这一点。</p>
+<p><del>然后照着上面的写，又出问题了，但后面调试出来没错</del></p>
+<p>继续简化问题，既然已经知道最大值要么出现在奇数位置时取奇数序列，出现在偶数位置时取偶数序列，那么直接模拟这两种情况取最大值即可。看了一下，用时最短的答案也是这么做的。</p>
+<p>(充满修改的痕迹)</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e3</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> ll mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[N];</span><br><span class="line"><span class="type">int</span> dp[N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> maxodd = <span class="number">-1</span>, maxeven = <span class="number">-1</span>;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		<span class="keyword">if</span>(i % <span class="number">2</span>) maxodd = <span class="built_in">max</span>(maxodd, a[i]);</span><br><span class="line">		<span class="keyword">else</span> maxeven = <span class="built_in">max</span>(maxeven, a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">max</span>(maxodd + (n / <span class="number">2</span> + n % <span class="number">2</span>), maxeven + (n / <span class="number">2</span>)) &lt;&lt; endl;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//	if(n % 2 &amp;&amp; maxpos % 2) cout &lt;&lt; maxx + n/2 + 1 &lt;&lt; endl;</span></span><br><span class="line"><span class="comment">//	else cout &lt;&lt; maxx + n/2 &lt;&lt; endl;</span></span><br><span class="line"><span class="comment">//	dp[1] = a[1], dp[2] = a[2];</span></span><br><span class="line"><span class="comment">//	for(int i = 3; i &lt;= n; i++)&#123;</span></span><br><span class="line"><span class="comment">//		dp[i] = max(dp[i - 1], max(dp[i - 2] + a[i], dp[i - 3] + a[i]));</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"><span class="comment">//	cout &lt;&lt; dp[n] &lt;&lt; endl;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>补了一下，上一种思路确实是对的：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="type">int</span> maxx = <span class="number">-1</span>, pos = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		<span class="keyword">if</span>(maxx &lt;= a[i])&#123;</span><br><span class="line">			<span class="keyword">if</span>(i % <span class="number">2</span>)&#123;maxx = a[i], pos = i;&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(maxx &lt; a[i])&#123;maxx = a[i], pos = i;&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(pos % <span class="number">2</span>) cout &lt;&lt; maxx + n/<span class="number">2</span> + (n % <span class="number">2</span>) &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; maxx + n/<span class="number">2</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="B-All-Pairs-Segments"><a href="#B-All-Pairs-Segments" class="headerlink" title="B. All Pairs Segments"></a><a href="https://codeforces.com/contest/2019/problem/Bhttps://codeforces.com/contest/2019/problem/B">B. All Pairs Segments</a></h2><p>第一次开出这种区间计数的题，很有意思。</p>
+<p>手算样例并观察可以发现，计算包含区间端点的区间数和计算包含开区间之内的数字的区间数的计算方式是不同的，因此枚举一次区间端点再枚举一次区间即可，时间复杂度O(n)。</p>
+]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+</search>
