@@ -121,7 +121,7 @@
 
   <url>
     <loc>https://analysisss.github.io/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -129,21 +129,21 @@
   
   <url>
     <loc>https://analysisss.github.io/tags/ACM/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://analysisss.github.io/tags/codeforces/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://analysisss.github.io/tags/daily/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
