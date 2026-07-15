@@ -1,0 +1,926 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>算法刷题记录 | 琰之的Blog</title><meta name="author" content="琰之"><meta name="copyright" content="琰之"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="0       总计                 0       已解决                 0       部分解决                 0       未解决                    加载中...                      &times;                   &#x2F;* &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="算法刷题记录">
+<meta property="og:url" content="https://analysisss.github.io/algorithm-problem-tracker/index.html">
+<meta property="og:site_name" content="琰之的Blog">
+<meta property="og:description" content="0       总计                 0       已解决                 0       部分解决                 0       未解决                    加载中...                      &times;                   &#x2F;* &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://analysisss.github.io/img/pingwengundong.png">
+<meta property="article:published_time" content="2026-07-15T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-07-15T14:56:17.564Z">
+<meta property="article:author" content="琰之">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://analysisss.github.io/img/pingwengundong.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://analysisss.github.io/algorithm-problem-tracker/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法刷题记录',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-07-15 22:56:17'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/pingwengundong.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">0</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页 | home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档 | archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签 | tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类 | categories</span></a></div><div class="menus_item"><a class="site-page" href="/algorithm-problem-tracker/"><i class="fa-fw fas fa-code"></i><span> 算法刷题 | algorithm</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板 | comments</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="琰之的Blog"><span class="site-name">琰之的Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页 | home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档 | archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签 | tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类 | categories</span></a></div><div class="menus_item"><a class="site-page" href="/algorithm-problem-tracker/"><i class="fa-fw fas fa-code"></i><span> 算法刷题 | algorithm</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板 | comments</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">算法刷题记录</h1></div></header><main class="layout hide-aside" id="content-inner"><div id="page"><div id="article-container"><div id="alg-tracker-app">
+  <!-- Stats Bar -->
+  <div class="alg-stats-bar">
+    <div class="alg-stat-item">
+      <span class="alg-stat-num" id="stat-total">0</span>
+      <span class="alg-stat-label">总计</span>
+    </div>
+    <div class="alg-stat-item solved">
+      <span class="alg-stat-num" id="stat-solved">0</span>
+      <span class="alg-stat-label">已解决</span>
+    </div>
+    <div class="alg-stat-item partial">
+      <span class="alg-stat-num" id="stat-partial">0</span>
+      <span class="alg-stat-label">部分解决</span>
+    </div>
+    <div class="alg-stat-item unsolved">
+      <span class="alg-stat-num" id="stat-unsolved">0</span>
+      <span class="alg-stat-label">未解决</span>
+    </div>
+  </div>
+
+  <!-- Topic Columns Container -->
+  <div class="alg-columns-wrapper" id="alg-columns">
+    <div class="alg-loading">加载中...</div>
+  </div>
+
+  <!-- Modal -->
+  <div class="alg-modal-overlay" id="alg-modal">
+    <div class="alg-modal-card">
+      <button class="alg-modal-close" id="alg-modal-close">&times;</button>
+      <div class="alg-modal-body" id="alg-modal-body"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ============================================
+   Algorithm Tracker - CSS
+   ============================================ */
+
+/* --- CSS Variables (with Butterfly fallback) --- */
+#alg-tracker-app {
+  --alg-card-bg: var(--card-bg, #ffffff);
+  --alg-font-color: var(--font-color, #333333);
+  --alg-text-muted: var(--text-muted, #999999);
+  --alg-border: var(--border-color, #e0e0e0);
+  --alg-second-bg: var(--secondbg, #f5f5f5);
+  --alg-radius: 12px;
+  --alg-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --alg-transition: 0.2s ease;
+
+  font-family: inherit;
+  color: var(--alg-font-color);
+  max-width: 100%;
+}
+
+/* --- Stats Bar --- */
+.alg-stats-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: var(--alg-card-bg);
+  border-radius: var(--alg-radius);
+  border: 1px solid var(--alg-border);
+  box-shadow: var(--alg-shadow);
+}
+
+.alg-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--alg-second-bg);
+  flex: 1;
+}
+
+.alg-stat-num {
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--alg-font-color);
+}
+
+.alg-stat-label {
+  font-size: 0.75em;
+  color: var(--alg-text-muted);
+  margin-top: 2px;
+}
+
+.alg-stat-item.solved .alg-stat-num { color: #27ae60; }
+.alg-stat-item.partial .alg-stat-num { color: #f39c12; }
+.alg-stat-item.unsolved .alg-stat-num { color: #95a5a6; }
+
+/* --- Columns Wrapper --- */
+.alg-columns-wrapper {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.alg-columns-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.alg-columns-wrapper::-webkit-scrollbar-track {
+  background: var(--alg-second-bg);
+  border-radius: 3px;
+}
+
+.alg-columns-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* --- Loading / Empty --- */
+.alg-loading,
+.alg-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--alg-text-muted);
+  font-size: 1.1em;
+  width: 100%;
+}
+
+/* --- Topic Column --- */
+.alg-topic-col {
+  min-width: 280px;
+  max-width: 340px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: var(--alg-card-bg);
+  border-radius: var(--alg-radius);
+  border: 1px solid var(--alg-border);
+  box-shadow: var(--alg-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.alg-topic-header {
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid var(--alg-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alg-topic-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.alg-topic-info {
+  overflow: hidden;
+}
+
+.alg-topic-name {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--alg-font-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alg-topic-en {
+  font-size: 0.75em;
+  color: var(--alg-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alg-topic-body {
+  padding: 8px 14px 14px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* --- Subtopic --- */
+.alg-subtopic {
+  margin-top: 12px;
+}
+
+.alg-subtopic-name {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--alg-text-muted);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed var(--alg-border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alg-subtopic-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.alg-subtopic-empty {
+  font-size: 0.78em;
+  color: var(--alg-text-muted);
+  font-style: italic;
+  padding: 2px 0;
+}
+
+/* --- Problem Badge --- */
+.alg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: transform var(--alg-transition), box-shadow var(--alg-transition);
+  white-space: nowrap;
+  max-width: 100%;
+  user-select: none;
+  position: relative;
+}
+
+.alg-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Status variants */
+.alg-badge.solved {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.alg-badge.partial {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+.alg-badge.unsolved {
+  background: transparent;
+  color: var(--alg-text-muted);
+  border: 1px dashed #ccc;
+}
+
+/* Difficulty dot */
+.alg-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.alg-badge-dot.easy { background: #27ae60; }
+.alg-badge-dot.medium { background: #f39c12; }
+.alg-badge-dot.hard { background: #e74c3c; }
+
+/* Status icon */
+.alg-badge-icon {
+  font-size: 0.75em;
+  flex-shrink: 0;
+}
+
+.alg-badge.solved .alg-badge-icon::before { content: "✓"; }
+.alg-badge.partial .alg-badge-icon::before { content: "~"; }
+.alg-badge.unsolved .alg-badge-icon::before { content: "○"; }
+
+/* Badge title (may truncate) */
+.alg-badge-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Modal --- */
+.alg-modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: algFadeIn 0.2s ease;
+}
+
+.alg-modal-overlay.active {
+  display: flex;
+}
+
+@keyframes algFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes algSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.alg-modal-card {
+  background: var(--alg-card-bg);
+  color: var(--alg-font-color);
+  border-radius: 16px;
+  padding: 28px 24px 24px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: algSlideUp 0.25s ease;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.alg-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--alg-text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color var(--alg-transition);
+}
+
+.alg-modal-close:hover {
+  color: var(--alg-font-color);
+}
+
+.alg-modal-problem-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0 0 12px;
+  padding-right: 28px;
+  color: var(--alg-font-color);
+}
+
+.alg-modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.alg-modal-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 500;
+  background: var(--alg-second-bg);
+  color: var(--alg-font-color);
+  border: 1px solid var(--alg-border);
+}
+
+.alg-modal-tag.difficulty-easy { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+.alg-modal-tag.difficulty-medium { background: #fff3e0; color: #e65100; border-color: #ffcc80; }
+.alg-modal-tag.difficulty-hard { background: #fce4ec; color: #c62828; border-color: #ef9a9a; }
+.alg-modal-tag.status-solved { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+.alg-modal-tag.status-partial { background: #fff3e0; color: #e65100; border-color: #ffcc80; }
+.alg-modal-tag.status-unsolved { background: #f5f5f5; color: #999; border-color: #e0e0e0; }
+
+.alg-modal-note {
+  background: var(--alg-second-bg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: var(--alg-font-color);
+  border-left: 3px solid var(--alg-border);
+}
+
+.alg-modal-note-label {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--alg-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.alg-modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: #3498db;
+  transition: background var(--alg-transition), transform var(--alg-transition);
+}
+
+.alg-modal-link:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: #fff;
+}
+
+.alg-modal-link.no-link {
+  background: var(--alg-second-bg);
+  color: var(--alg-text-muted);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .alg-stats-bar {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .alg-stat-item {
+    min-width: 60px;
+    padding: 6px 10px;
+  }
+
+  .alg-stat-num {
+    font-size: 1.3em;
+  }
+
+  .alg-topic-col {
+    min-width: 260px;
+    max-width: 300px;
+  }
+
+  .alg-modal-card {
+    padding: 20px 16px;
+    margin: 10px;
+  }
+}
+</style>
+
+<script>
+(function() {
+  'use strict';
+
+  const APP = document.getElementById('alg-tracker-app');
+  const COLUMNS = document.getElementById('alg-columns');
+  const MODAL = document.getElementById('alg-modal');
+  const MODAL_BODY = document.getElementById('alg-modal-body');
+  const MODAL_CLOSE = document.getElementById('alg-modal-close');
+
+  const STAT_TOTAL = document.getElementById('stat-total');
+  const STAT_SOLVED = document.getElementById('stat-solved');
+  const STAT_PARTIAL = document.getElementById('stat-partial');
+  const STAT_UNSOLVED = document.getElementById('stat-unsolved');
+
+  // ========== Fetch Data ==========
+  function loadData() {
+    COLUMNS.innerHTML = '<div class="alg-loading">加载中...</div>';
+
+    fetch('/algorithm-problem-tracker/data.json')
+      .then(function(res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function(data) {
+        render(data);
+      })
+      .catch(function(err) {
+        console.error('算法刷题数据加载失败:', err);
+        COLUMNS.innerHTML = '<div class="alg-empty">数据加载失败，请刷新页面重试<br><small style="color:#999">（确保 data.json 文件存在且格式正确）</small></div>';
+      });
+  }
+
+  // ========== Count Stats ==========
+  function countStats(topics) {
+    var total = 0, solved = 0, partial = 0, unsolved = 0;
+
+    topics.forEach(function(topic) {
+      topic.subtopics.forEach(function(sub) {
+        sub.problems.forEach(function(p) {
+          total++;
+          if (p.status === 'solved') solved++;
+          else if (p.status === 'partial') partial++;
+          else unsolved++;
+        });
+      });
+    });
+
+    return { total: total, solved: solved, partial: partial, unsolved: unsolved };
+  }
+
+  // ========== Render ==========
+  function render(data) {
+    var topics = data.topics || [];
+
+    if (topics.length === 0) {
+      COLUMNS.innerHTML = '<div class="alg-empty">暂无专题数据<br><small style="color:#999">编辑 data.json 来添加专题和题目</small></div>';
+      updateStats({ total: 0, solved: 0, partial: 0, unsolved: 0 });
+      return;
+    }
+
+    // Stats
+    updateStats(countStats(topics));
+
+    // Build columns
+    var html = '';
+    topics.forEach(function(topic) {
+      html += renderTopicColumn(topic);
+    });
+    COLUMNS.innerHTML = html;
+  }
+
+  function updateStats(s) {
+    STAT_TOTAL.textContent = s.total;
+    STAT_SOLVED.textContent = s.solved;
+    STAT_PARTIAL.textContent = s.partial;
+    STAT_UNSOLVED.textContent = s.unsolved;
+  }
+
+  function renderTopicColumn(topic) {
+    var h = '';
+    h += '<div class="alg-topic-col">';
+
+    // Header
+    h += '<div class="alg-topic-header">';
+    h += '<div class="alg-topic-icon" style="background:' + escapeHtml(topic.color || '#999') + '">';
+    h += '<i class="fas ' + escapeHtml(topic.icon || 'fa-folder') + '"></i>';
+    h += '</div>';
+    h += '<div class="alg-topic-info">';
+    h += '<div class="alg-topic-name">' + escapeHtml(topic.name) + '</div>';
+    h += '<div class="alg-topic-en">' + escapeHtml(topic.nameEn || '') + '</div>';
+    h += '</div>';
+    h += '</div>';
+
+    // Body
+    h += '<div class="alg-topic-body">';
+    var subtopics = topic.subtopics || [];
+    for (var i = 0; i < subtopics.length; i++) {
+      h += renderSubtopic(subtopics[i], topic);
+    }
+    h += '</div>';
+
+    h += '</div>';
+    return h;
+  }
+
+  function renderSubtopic(subtopic, topic) {
+    var h = '';
+    h += '<div class="alg-subtopic">';
+    h += '<div class="alg-subtopic-name">' + escapeHtml(subtopic.name) + '</div>';
+    h += '<div class="alg-subtopic-badges">';
+
+    var problems = subtopic.problems || [];
+    if (problems.length === 0) {
+      h += '<span class="alg-subtopic-empty">等待添加...</span>';
+    } else {
+      for (var i = 0; i < problems.length; i++) {
+        h += renderBadge(problems[i], subtopic, topic);
+      }
+    }
+
+    h += '</div>';
+    h += '</div>';
+    return h;
+  }
+
+  function renderBadge(problem, subtopic, topic) {
+    var cls = 'alg-badge ' + (problem.status || 'unsolved');
+    var title = escapeHtml(problem.title || '(无标题)');
+    var diff = problem.difficulty || 'medium';
+
+    var h = '';
+    h += '<span class="' + cls + '" data-problem-id="' + escapeHtml(problem.id || '') + '">';
+    h += '<span class="alg-badge-dot ' + diff + '"></span>';
+    h += '<span class="alg-badge-icon"></span>';
+    h += '<span class="alg-badge-title">' + title + '</span>';
+    h += '</span>';
+    return h;
+  }
+
+  // ========== Modal ==========
+  function showModal(problem, subtopic, topic) {
+    var diffLabels = { easy: '简单', medium: '中等', hard: '困难' };
+    var statusLabels = { solved: '已解决', partial: '部分解决', unsolved: '未解决' };
+
+    var body = '';
+    body += '<h2 class="alg-modal-problem-title">' + escapeHtml(problem.title || '(无标题)') + '</h2>';
+
+    // Meta tags
+    body += '<div class="alg-modal-meta">';
+    body += '<span class="alg-modal-tag">📂 ' + escapeHtml(topic.name) + ' › ' + escapeHtml(subtopic.name) + '</span>';
+    body += '<span class="alg-modal-tag difficulty-' + (problem.difficulty || 'medium') + '">' + (diffLabels[problem.difficulty] || '中等') + '</span>';
+    body += '<span class="alg-modal-tag status-' + (problem.status || 'unsolved') + '">' + (statusLabels[problem.status] || '未解决') + '</span>';
+    body += '</div>';
+
+    // Note
+    if (problem.note) {
+      body += '<div class="alg-modal-note">';
+      body += '<div class="alg-modal-note-label">📝 笔记</div>';
+      body += escapeHtml(problem.note);
+      body += '</div>';
+    }
+
+    // Link
+    if (problem.link) {
+      body += '<a class="alg-modal-link" href="' + escapeHtml(problem.link) + '" target="_blank">📖 查看完整题解 →</a>';
+    } else {
+      body += '<span class="alg-modal-link no-link">📖 暂无题解链接</span>';
+    }
+
+    MODAL_BODY.innerHTML = body;
+    MODAL.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    MODAL.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // ========== Event Delegation ==========
+  COLUMNS.addEventListener('click', function(e) {
+    var badge = e.target.closest('.alg-badge');
+    if (!badge) return;
+
+    var problemId = badge.getAttribute('data-problem-id');
+
+    // Find problem data by traversing the data
+    // We re-fetch or use cached data
+    fetch('/algorithm-problem-tracker/data.json')
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var topics = data.topics || [];
+        for (var i = 0; i < topics.length; i++) {
+          var topic = topics[i];
+          var subtopics = topic.subtopics || [];
+          for (var j = 0; j < subtopics.length; j++) {
+            var sub = subtopics[j];
+            var problems = sub.problems || [];
+            for (var k = 0; k < problems.length; k++) {
+              if (problems[k].id === problemId) {
+                showModal(problems[k], sub, topic);
+                return;
+              }
+            }
+          }
+        }
+      })
+      .catch(function(err) {
+        console.error('打开详情失败:', err);
+      });
+  });
+
+  // Close modal events
+  MODAL_CLOSE.addEventListener('click', closeModal);
+
+  MODAL.addEventListener('click', function(e) {
+    if (e.target === MODAL) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && MODAL.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // ========== Util ==========
+  function escapeHtml(str) {
+    if (!str) return '';
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  // ========== Init ==========
+  loadData();
+})();
+</script>
+</div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 琰之</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('categories-card');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('categories-card') && (location.pathname ==='/categories/'|| '/categories/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --></body></html>
