@@ -80,7 +80,14 @@
               "difficulty": "medium",
               "status": "solved",
               "note": "",
-              "link": "/posts/cf1074.html#cf1074-D"
+              "link": "/posts/cf1074.html#cf1074-D",
+              "postTitle": "Codeforces Round 1074 (Div. 4)",
+              "postDate": "2026-02-01 19:41:02",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf1074",
+              "description": "只更新需要更新的元素，其他元素打上懒标记即可。"
             }
           ]
         },
@@ -174,7 +181,22 @@
         },
         {
           "name": "BFS",
-          "problems": []
+          "problems": [
+            {
+              "id": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial-C",
+              "title": "C. [原题链接]()",
+              "label": "[原题链接]()",
+              "difficulty": "medium",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/Codeforces Round 1105 (Div. 1, Div. 2) Editorial.html#Codeforces Round 1105 (Div. 1, Div. 2) Editorial-C",
+              "postTitle": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
+              "postDate": "2026-07-19 17:30:03",
+              "postTags": [],
+              "postAbbrlink": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
+              "description": ""
+            }
+          ]
         },
         {
           "name": "二分搜索",
@@ -206,7 +228,28 @@
               "difficulty": "easy",
               "status": "solved",
               "note": "",
-              "link": "/posts/cf1074.html#cf1074-B"
+              "link": "/posts/cf1074.html#cf1074-B",
+              "postTitle": "Codeforces Round 1074 (Div. 4)",
+              "postDate": "2026-02-01 19:41:02",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf1074",
+              "description": "容易证明，把最大的数换到最左端可以得到最优解 $n \\times \\max(a_i)$。"
+            },
+            {
+              "id": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial-B",
+              "title": "B. [原题链接]()",
+              "label": "[原题链接]()",
+              "difficulty": "easy",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/Codeforces Round 1105 (Div. 1, Div. 2) Editorial.html#Codeforces Round 1105 (Div. 1, Div. 2) Editorial-B",
+              "postTitle": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
+              "postDate": "2026-07-19 17:30:03",
+              "postTags": [],
+              "postAbbrlink": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
+              "description": ""
             }
           ]
         },
@@ -224,7 +267,14 @@
               "difficulty": "medium",
               "status": "solved",
               "note": "",
-              "link": "/posts/cf1074.html#cf1074-C"
+              "link": "/posts/cf1074.html#cf1074-C",
+              "postTitle": "Codeforces Round 1074 (Div. 4)",
+              "postDate": "2026-02-01 19:41:02",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf1074",
+              "description": "加法操作相当于将整个序列左移或右移，所以实际上是求该集合（顺序可变）的最长上升子序列。"
             },
             {
               "id": "cf1074-E",
@@ -233,7 +283,14 @@
               "difficulty": "hard",
               "status": "solved",
               "note": "",
-              "link": "/posts/cf1074.html#cf1074-E"
+              "link": "/posts/cf1074.html#cf1074-E",
+              "postTitle": "Codeforces Round 1074 (Div. 4)",
+              "postDate": "2026-02-01 19:41:02",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf1074",
+              "description": "由于每个机器人之死只可能由于碰到左边或右边最近的尖刺，故用双指针或二分法算出每个机器人到两侧最近尖刺的距离。当进行移动时，根据当前更新的位置计算出此时被碰壁的机器人数量，并注意不要删除已死亡的机器人。这样每个机器人至多被查询两次。"
             }
           ]
         },
@@ -251,7 +308,28 @@
               "difficulty": "easy",
               "status": "solved",
               "note": "",
-              "link": "/posts/cf1074.html#cf1074-A"
+              "link": "/posts/cf1074.html#cf1074-A",
+              "postTitle": "Codeforces Round 1074 (Div. 4)",
+              "postDate": "2026-02-01 19:41:02",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf1074",
+              "description": "一开始还以为看错条件了，实际上所有的正整数都是某个正整数的平方根。"
+            },
+            {
+              "id": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial-A",
+              "title": "A. [原题链接]()",
+              "label": "[原题链接]()",
+              "difficulty": "easy",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/Codeforces Round 1105 (Div. 1, Div. 2) Editorial.html#Codeforces Round 1105 (Div. 1, Div. 2) Editorial-A",
+              "postTitle": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
+              "postDate": "2026-07-19 17:30:03",
+              "postTags": [],
+              "postAbbrlink": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
+              "description": ""
             }
           ]
         },

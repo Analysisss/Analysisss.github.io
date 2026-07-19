@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://analysisss.github.io/posts/cf1074.html</loc>
+    <loc>https://analysisss.github.io/algorithm-problem-tracker/index.html</loc>
     
     <lastmod>2026-07-19</lastmod>
     
@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>https://analysisss.github.io/algorithm-problem-tracker/index.html</loc>
+    <loc>https://analysisss.github.io/posts/Codeforces%20Round%201105%20(Div.%201,%20Div.%202)%20Editorial.html</loc>
+    
+    <lastmod>2026-07-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://analysisss.github.io/posts/cf1074.html</loc>
     
     <lastmod>2026-07-19</lastmod>
     
