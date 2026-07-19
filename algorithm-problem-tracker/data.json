@@ -1,1 +1,265 @@
-{"topics":[{"name":"动态规划","nameEn":"DP","icon":"fa-diagram-project","color":"#e74c3c","subtopics":[{"name":"线性DP","problems":[]},{"name":"区间DP","problems":[]},{"name":"背包DP","problems":[]},{"name":"树形DP","problems":[]},{"name":"状态压缩DP","problems":[]},{"name":"数位DP","problems":[]}]},{"name":"图论","nameEn":"Graph","icon":"fa-share-nodes","color":"#3498db","subtopics":[{"name":"最短路","problems":[]},{"name":"最小生成树","problems":[]},{"name":"拓扑排序","problems":[]},{"name":"强连通分量","problems":[]},{"name":"二分图","problems":[]},{"name":"网络流","problems":[]}]},{"name":"数据结构","nameEn":"Data Struct","icon":"fa-tree","color":"#2ecc71","subtopics":[{"name":"栈与队列","problems":[{"id":"cf1074-D","title":"D. OutOfMemoryError","difficulty":"medium","status":"solved","note":"懒标记优化，仅更新需更改元素","link":"/posts/cf1074.html#cf1074-D"}]},{"name":"并查集","problems":[]},{"name":"线段树","problems":[]},{"name":"树状数组","problems":[]},{"name":"平衡树","problems":[]},{"name":"堆与优先队列","problems":[]}]},{"name":"字符串","nameEn":"String","icon":"fa-font","color":"#9b59b6","subtopics":[{"name":"KMP","problems":[]},{"name":"Trie","problems":[]},{"name":"字符串哈希","problems":[]},{"name":"AC自动机","problems":[]},{"name":"后缀数组","problems":[]}]},{"name":"数学","nameEn":"Math","icon":"fa-calculator","color":"#f39c12","subtopics":[{"name":"数论","problems":[]},{"name":"组合数学","problems":[]},{"name":"计算几何","problems":[]},{"name":"博弈论","problems":[]},{"name":"概率与期望","problems":[]}]},{"name":"搜索","nameEn":"Search","icon":"fa-magnifying-glass","color":"#1abc9c","subtopics":[{"name":"DFS","problems":[]},{"name":"BFS","problems":[{"id":"cf1074-C","title":"C. Shifted MEX","difficulty":"medium","status":"solved","note":"序列位移问题→求最长上升子序列","link":"/posts/cf1074.html#cf1074-C"}]},{"name":"二分搜索","problems":[]},{"name":"回溯","problems":[]},{"name":"启发式搜索","problems":[]}]},{"name":"其他","nameEn":"Others","icon":"fa-ellipsis","color":"#7f8c8d","subtopics":[{"name":"贪心","problems":[{"id":"cf1074-B","title":"B. Prefix Max","difficulty":"easy","status":"solved","note":"最大数置左端即得最优解","link":"/posts/cf1074.html#cf1074-B"}]},{"name":"前缀和与差分","problems":[]},{"name":"双指针","problems":[{"id":"cf1074-E","title":"E. The Robotic Rush","difficulty":"hard","status":"solved","note":"双指针+懒删除，各机器人至多两次查询","link":"/posts/cf1074.html#cf1074-E"}]},{"name":"位运算","problems":[]},{"name":"构造","problems":[{"id":"cf1074-A","title":"A. Perfect Root","difficulty":"easy","status":"solved","note":"所有正整数都是某正整数的平方根","link":"/posts/cf1074.html#cf1074-A"}]}]}]}
+{
+  "topics": [
+    {
+      "name": "动态规划",
+      "nameEn": "DP",
+      "icon": "fa-diagram-project",
+      "color": "#e74c3c",
+      "subtopics": [
+        {
+          "name": "线性DP",
+          "problems": []
+        },
+        {
+          "name": "区间DP",
+          "problems": []
+        },
+        {
+          "name": "背包DP",
+          "problems": []
+        },
+        {
+          "name": "树形DP",
+          "problems": []
+        },
+        {
+          "name": "状态压缩DP",
+          "problems": []
+        },
+        {
+          "name": "数位DP",
+          "problems": []
+        }
+      ]
+    },
+    {
+      "name": "图论",
+      "nameEn": "Graph",
+      "icon": "fa-share-nodes",
+      "color": "#3498db",
+      "subtopics": [
+        {
+          "name": "最短路",
+          "problems": []
+        },
+        {
+          "name": "最小生成树",
+          "problems": []
+        },
+        {
+          "name": "拓扑排序",
+          "problems": []
+        },
+        {
+          "name": "强连通分量",
+          "problems": []
+        },
+        {
+          "name": "二分图",
+          "problems": []
+        },
+        {
+          "name": "网络流",
+          "problems": []
+        }
+      ]
+    },
+    {
+      "name": "数据结构",
+      "nameEn": "Data Struct",
+      "icon": "fa-tree",
+      "color": "#2ecc71",
+      "subtopics": [
+        {
+          "name": "栈与队列",
+          "problems": [
+            {
+              "id": "cf1074-D",
+              "title": "D. OutOfMemoryError",
+              "label": "懒标记批量更新",
+              "difficulty": "medium",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/cf1074.html#cf1074-D"
+            }
+          ]
+        },
+        {
+          "name": "并查集",
+          "problems": []
+        },
+        {
+          "name": "线段树",
+          "problems": []
+        },
+        {
+          "name": "树状数组",
+          "problems": []
+        },
+        {
+          "name": "平衡树",
+          "problems": []
+        },
+        {
+          "name": "堆与优先队列",
+          "problems": []
+        }
+      ]
+    },
+    {
+      "name": "字符串",
+      "nameEn": "String",
+      "icon": "fa-font",
+      "color": "#9b59b6",
+      "subtopics": [
+        {
+          "name": "KMP",
+          "problems": []
+        },
+        {
+          "name": "Trie",
+          "problems": []
+        },
+        {
+          "name": "字符串哈希",
+          "problems": []
+        },
+        {
+          "name": "AC自动机",
+          "problems": []
+        },
+        {
+          "name": "后缀数组",
+          "problems": []
+        }
+      ]
+    },
+    {
+      "name": "数学",
+      "nameEn": "Math",
+      "icon": "fa-calculator",
+      "color": "#f39c12",
+      "subtopics": [
+        {
+          "name": "数论",
+          "problems": []
+        },
+        {
+          "name": "组合数学",
+          "problems": []
+        },
+        {
+          "name": "计算几何",
+          "problems": []
+        },
+        {
+          "name": "博弈论",
+          "problems": []
+        },
+        {
+          "name": "概率与期望",
+          "problems": []
+        }
+      ]
+    },
+    {
+      "name": "搜索",
+      "nameEn": "Search",
+      "icon": "fa-magnifying-glass",
+      "color": "#1abc9c",
+      "subtopics": [
+        {
+          "name": "DFS",
+          "problems": []
+        },
+        {
+          "name": "BFS",
+          "problems": []
+        },
+        {
+          "name": "二分搜索",
+          "problems": []
+        },
+        {
+          "name": "回溯",
+          "problems": []
+        },
+        {
+          "name": "启发式搜索",
+          "problems": []
+        }
+      ]
+    },
+    {
+      "name": "其他",
+      "nameEn": "Others",
+      "icon": "fa-ellipsis",
+      "color": "#7f8c8d",
+      "subtopics": [
+        {
+          "name": "贪心",
+          "problems": [
+            {
+              "id": "cf1074-B",
+              "title": "B. Prefix Max",
+              "label": "最大数左移得最优解",
+              "difficulty": "easy",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/cf1074.html#cf1074-B"
+            }
+          ]
+        },
+        {
+          "name": "前缀和与差分",
+          "problems": []
+        },
+        {
+          "name": "双指针",
+          "problems": [
+            {
+              "id": "cf1074-C",
+              "title": "C. Shifted MEX",
+              "label": "LIS 求最长连续子序列",
+              "difficulty": "medium",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/cf1074.html#cf1074-C"
+            },
+            {
+              "id": "cf1074-E",
+              "title": "E. The Robotic Rush",
+              "label": "双指针+懒删除两侧刺",
+              "difficulty": "hard",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/cf1074.html#cf1074-E"
+            }
+          ]
+        },
+        {
+          "name": "位运算",
+          "problems": []
+        },
+        {
+          "name": "构造",
+          "problems": [
+            {
+              "id": "cf1074-A",
+              "title": "A. Perfect Root",
+              "label": "正整数平方根性质",
+              "difficulty": "easy",
+              "status": "solved",
+              "note": "",
+              "link": "/posts/cf1074.html#cf1074-A"
+            }
+          ]
+        },
+        {
+          "name": "数据结构",
+          "problems": []
+        }
+      ]
+    }
+  ]
+}
