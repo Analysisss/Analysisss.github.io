@@ -1,7 +1,10 @@
-https://analysisss.github.io/index.html
-https://analysisss.github.io/algorithm-problem-tracker/index.html
 https://analysisss.github.io/algorithm-problem-tracker/data.json
+https://analysisss.github.io/posts/cf1074.html
+https://analysisss.github.io/comments/index.html
+https://analysisss.github.io/link/index.html
 https://analysisss.github.io/categories/index.html
+https://analysisss.github.io/algorithm-problem-tracker/index.html
 https://analysisss.github.io/about/index.html
 https://analysisss.github.io/tags/index.html
 https://analysisss.github.io/
+https://analysisss.github.io/tags/codeforces/
