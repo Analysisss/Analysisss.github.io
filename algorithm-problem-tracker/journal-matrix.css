@@ -1,0 +1,103 @@
+/* Each major algorithm owns one horizontal column; its own subtopics stack vertically. */
+.matrix-view .shell { display: block; }
+.matrix-view .sidebar { position: static; width: 100%; height: 32px; padding: 0 10px; flex-direction: row; align-items: center; gap: 25px; border-right: 0; border-bottom: 1px solid var(--line); }
+.matrix-view .brand { font-size: 12px; gap: 12px; white-space: nowrap; }
+.matrix-view .brand-note, .matrix-view .side-bottom, .matrix-view .nav span { display: none; }
+.matrix-view nav { display: flex; gap: 6px; margin: 0; }
+.matrix-view .nav { padding: 4px 10px; font-size: 11px; border-radius: 3px; white-space: nowrap; flex: 0 0 auto; }
+.matrix-view main { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; padding: 6px 8px; max-width: none; }
+.matrix-view .page-head { grid-row: 1; grid-column: 1; justify-content: start; gap: 16px; margin: 0; }
+.matrix-view .page-head .eyebrow, .matrix-view #view-description, .matrix-view .stats { display: none; }
+.matrix-view h1 { font-size: 18px; margin: 0; letter-spacing: 0; white-space: nowrap; }
+.matrix-view .page-head button { padding: 5px 8px; font-size: 11px; white-space: nowrap; }
+.matrix-view .filters { grid-column: 1 / -1; grid-row: 3; gap: 7px; padding: 6px 0; }
+.matrix-view:not(.matrix-filtering) .filters { display: none; }
+.matrix-view .filters label { min-width: 105px; font-size: 10px; gap: 3px; }
+.matrix-view .filters .search { min-width: 150px; }
+.matrix-view .filters input, .matrix-view .filters select { padding: 5px; font-size: 11px; }
+.matrix-view .result-bar { grid-column: 1 / -1; grid-row: 2; margin: 0; font-size: 10px; min-height: 25px; }
+.matrix-view .result-bar select, .matrix-view .result-bar button { font-size: 10px; padding: 4px 6px; }
+.matrix-view #message { grid-column: 1 / -1; grid-row: 4; }
+.matrix-view #message:empty { display: none; }
+.matrix-view #content { grid-column: 1 / -1; grid-row: 5; min-width: 0; }
+.matrix-view .warnings { grid-column: 1 / -1; grid-row: 6; margin-top: 6px; }
+.matrix-tools { grid-column: 2; grid-row: 1; display: flex; justify-content: end; align-items: center; gap: 10px; font-size: 10px; }
+.matrix-tools > span { display: none; }
+.matrix-tools > div { display: flex; align-items: center; justify-content: end; gap: 10px; flex-wrap: wrap; }
+.matrix-tools label { display: inline-flex; flex-direction: row; align-items: center; gap: 3px; font-size: 10px; white-space: nowrap; }
+.matrix-tools input { accent-color: var(--green); margin: 0; }
+.matrix-tools select, .matrix-tools button { font-size: 10px; padding: 4px 6px; }
+.matrix-caption { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 10px; line-height: 1.5; padding: 1px 0 4px; }
+.matrix-scroll { width: 100%; max-height: calc(100dvh - 145px); overflow: auto; border: 1px solid #cbd7ca; background: #f5f8f1; scrollbar-width: thin; }
+.algorithm-matrix { display: grid; grid-template-columns: repeat(var(--matrix-group-count), minmax(var(--matrix-column-width), var(--matrix-column-max))); align-items: stretch; min-width: 100%; }
+.matrix-column { min-width: 0; background: #f5f8f1; border-right: 1px solid #cbd7ca; }
+.matrix-column:last-child { border-right: 0; }
+.matrix-column-label { position: sticky; top: 0; z-index: 2; background: #e7efdf; padding: 7px 7px 0; border-bottom: 1px solid #cad8c0; }
+.matrix-column-label > div:first-child { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding-bottom: 5px; }
+.matrix-column-label strong { font-size: 13px; letter-spacing: .3px; color: #334e29; }
+.matrix-column-label span { font-size: 10px; color: #607658; white-space: nowrap; }
+.matrix-column-label b { font-size: 14px; font-weight: 600; }
+.matrix-group-meter { height: 3px; background: #d7e2ce; }
+.matrix-group-meter i { display: block; height: 100%; background: #7b9f68; }
+.matrix-cells { display: flex; flex-direction: column; }
+.matrix-tree-node .matrix-tree-node { border-left: 2px solid #dce6d3; }
+.matrix-cell { min-width: 0; border-bottom: 1px solid #cad8c0; padding: 0; background: #fff; }
+.matrix-cell > header { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; padding: 4px 6px; background: #f0f4e9; }
+.matrix-cell h3 { font-size: 11px; font-weight: 650; margin: 0; }
+.matrix-cell > header > span { color: var(--green); font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.matrix-cell > header small { font-size: 9px; color: var(--muted); }
+.matrix-meter { height: 2px; background: #edf2e7; }
+.matrix-meter i { display: block; height: 100%; background: #a2ba8f; }
+.matrix-note-list { display: flex; flex-direction: column; }
+.matrix-note { min-width: 0; padding: 5px 6px; border-bottom: 1px solid #e5eadf; }
+.matrix-note:last-child { border-bottom: 0; }
+.matrix-note:hover { background: #fbfdef; }
+.matrix-note-head { display: flex; align-items: center; gap: 5px; margin-bottom: 2px; }
+.matrix-note-head .problem-link { font-family: Consolas, "Microsoft YaHei", monospace; font-size: 10px; font-weight: 500; line-height: 1.4; overflow-wrap: anywhere; }
+.matrix-note-head .matrix-problem-name { flex: 1; min-width: 0; text-align: left; }
+.matrix-problem-name > span { display: block; white-space: normal; }
+.matrix-problem-name .matrix-problem-collections { color: var(--muted); font-size: 9px; }
+.excerpt-label { color: #87917f; font-size: 9px; margin-left: auto; white-space: nowrap; }
+.matrix-status { width: 5px; height: 5px; border-radius: 50%; background: #bac4b5; flex-shrink: 0; }
+.matrix-status[data-status="solved"], .matrix-status[data-status="solved_1a"], .matrix-status[data-status="solved_debug"] { background: #3d8558; }
+.matrix-status[data-status="assisted_debug"] { background: #b5843c; }
+.matrix-status[data-status="assisted_solved"] { background: #5b8eab; }
+.matrix-status[data-status="understood"] { background: #5b8eab; }
+.matrix-status[data-status="attempted"] { background: #bd9848; }
+.matrix-status[data-status="review"] { background: #bb7656; }
+.matrix-reflection { font-size: 12px; line-height: 1.55; color: #293523; white-space: pre-wrap; overflow-wrap: anywhere; }
+.reflection-more > summary { list-style: none; cursor: pointer; }
+.reflection-more > summary::-webkit-details-marker { display: none; }
+.reflection-more > summary small { display: inline; color: #7b8c71; font-size: 9px; margin-left: 3px; white-space: nowrap; }
+.reflection-more[open] > summary span { display: none; }
+.reflection-more[open] > summary small { font-size: 0; }
+.reflection-more[open] > summary small::after { content: "收起"; font-size: 9px; }
+.matrix-pitfall { font-size: 11px; line-height: 1.5; color: #9a6d3f; margin: 3px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.matrix-cell-empty { background: #f7f9f5; }
+.matrix-cell-empty h3, .matrix-no-problems { color: #8c9785; }
+.matrix-no-problems { font-size: 10px; padding: 3px 6px; margin: 0; }
+.matrix-focus .sidebar, .matrix-focus .page-head, .matrix-focus .result-bar { display: none; }
+.matrix-focus main { padding: 4px; }
+.matrix-focus .matrix-tools { grid-column: 1 / -1; }
+.matrix-focus .matrix-scroll { max-height: calc(100dvh - 75px); }
+.matrix-filtering .matrix-scroll { max-height: calc(100dvh - 210px); }
+@media (max-width: 800px) {
+  .matrix-view .sidebar { gap: 8px; padding: 0 6px; }
+  .matrix-view .brand { font-size: 10px; }
+  .matrix-view .brand span { display: none; }
+  .matrix-view nav { gap: 1px; }
+  .matrix-view .nav { padding: 4px 6px; font-size: 10px; }
+  .matrix-view main { display: flex; flex-direction: column; gap: 4px; padding: 5px; }
+  .matrix-view .page-head { order: 0; justify-content: space-between; align-items: center; }
+  .matrix-tools { order: 1; justify-content: start; }
+  .matrix-tools > div { justify-content: start; gap: 5px 9px; }
+  .matrix-view .result-bar { order: 2; flex-direction: row; flex-wrap: wrap; gap: 3px; align-items: center; }
+  .matrix-view .filters { order: 3; }
+  .matrix-view #message { order: 4; }
+  .matrix-view #content { order: 5; }
+  .matrix-view .warnings { order: 6; }
+  .matrix-caption { font-size: 9px; }
+  .matrix-caption > span:last-child { display: none; }
+  .matrix-scroll { max-height: calc(100dvh - 220px); }
+  .matrix-focus .matrix-scroll { max-height: calc(100dvh - 115px); }
+}

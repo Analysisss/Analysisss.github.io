@@ -180,21 +180,7 @@
         },
         {
           "name": "BFS",
-          "problems": [
-            {
-              "id": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial-C",
-              "title": "C. [原题链接]()",
-              "label": "[原题链接]()",
-              "difficulty": "medium",
-              "note": "",
-              "link": "/posts/Codeforces Round 1105 (Div. 1, Div. 2) Editorial.html#Codeforces Round 1105 (Div. 1, Div. 2) Editorial-C",
-              "postTitle": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
-              "postDate": "2026-07-19 17:30:03",
-              "postTags": [],
-              "postAbbrlink": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
-              "description": ""
-            }
-          ]
+          "problems": []
         },
         {
           "name": "二分搜索",
@@ -233,19 +219,6 @@
               ],
               "postAbbrlink": "cf1074",
               "description": "容易证明，把最大的数换到最左端可以得到最优解 $n \\times \\max(a_i)$。"
-            },
-            {
-              "id": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial-B",
-              "title": "B. [原题链接]()",
-              "label": "[原题链接]()",
-              "difficulty": "easy",
-              "note": "",
-              "link": "/posts/Codeforces Round 1105 (Div. 1, Div. 2) Editorial.html#Codeforces Round 1105 (Div. 1, Div. 2) Editorial-B",
-              "postTitle": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
-              "postDate": "2026-07-19 17:30:03",
-              "postTags": [],
-              "postAbbrlink": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
-              "description": ""
             }
           ]
         },
@@ -309,25 +282,55 @@
               ],
               "postAbbrlink": "cf1074",
               "description": "一开始还以为看错条件了，实际上所有的正整数都是某个正整数的平方根。"
-            },
-            {
-              "id": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial-A",
-              "title": "A. [原题链接]()",
-              "label": "[原题链接]()",
-              "difficulty": "easy",
-              "note": "",
-              "link": "/posts/Codeforces Round 1105 (Div. 1, Div. 2) Editorial.html#Codeforces Round 1105 (Div. 1, Div. 2) Editorial-A",
-              "postTitle": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
-              "postDate": "2026-07-19 17:30:03",
-              "postTags": [],
-              "postAbbrlink": "Codeforces Round 1105 (Div. 1, Div. 2) Editorial",
-              "description": ""
             }
           ]
         },
         {
           "name": "数据结构",
           "problems": []
+        }
+      ]
+    },
+    {
+      "name": "����",
+      "nameEn": "����",
+      "icon": "fa-folder",
+      "color": "#7f8c8d",
+      "subtopics": [
+        {
+          "name": "����",
+          "problems": [
+            {
+              "id": "cf test-A",
+              "title": "A. [原题链接]()",
+              "label": "test",
+              "difficulty": "easy",
+              "note": "",
+              "link": "/posts/cf test.html#cf test-A",
+              "postTitle": "cf test",
+              "postDate": "2026-07-19 20:52:43",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf test",
+              "description": ""
+            },
+            {
+              "id": "cf test-A",
+              "title": "A. test",
+              "label": "test",
+              "difficulty": "easy",
+              "note": "",
+              "link": "/posts/cf test.html#cf test-A",
+              "postTitle": "cf test",
+              "postDate": "2026-07-19 20:52:43",
+              "postTags": [
+                "codeforces"
+              ],
+              "postAbbrlink": "cf test",
+              "description": "content"
+            }
+          ]
         }
       ]
     }

@@ -1,0 +1,27 @@
+.problem-title { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 5px; min-width: 0; }
+.problem-lights { display: inline-flex; align-items: center; gap: 2px; white-space: nowrap; vertical-align: middle; }
+.star-button, .review-check { display: inline-flex; align-items: center; justify-content: center; padding: 0; width: 18px; height: 18px; font-size: 15px; line-height: 1; border: 0; border-radius: 3px; background: transparent; color: #a0aa96; }
+.star-button:hover, .star-button.is-starred { color: #af8212; background: #fff3bf; }
+.review-check { font-size: 12px; color: #6f8c57; }
+.review-check:hover { background: #e2efd6; color: #336625; }
+.due-indicator { color: #c57523; font-size: 14px; line-height: 1; }
+.matrix-note.is-starred, .record-card.is-starred { background: #fffbe8; box-shadow: inset 2px 0 #e0c155; }
+.matrix-note.is-review-due, .record-card.is-review-due { background: #fff6e9; box-shadow: inset 2px 0 #d99852; }
+.matrix-note.is-starred.is-review-due, .record-card.is-starred.is-review-due { background: #fff4d7; box-shadow: inset 2px 0 #d99852; }
+.matrix-note.is-starred:hover, .matrix-note.is-review-due:hover { background: #fff0c5; }
+.table-wrap tr.is-starred td, .table-wrap tr.is-starred td:first-child { background: #fffbe8; }
+.table-wrap tr.is-review-due td, .table-wrap tr.is-review-due td:first-child { background: #fff6e9; }
+.review-toolbar { flex-wrap: wrap; align-items: center; }
+#review-count { color: #977333; font-size: 10px; white-space: nowrap; }
+.review-panel { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; background: #f7f5eb; padding: 12px; margin-bottom: 16px; border: 1px solid #e6e1cb; border-radius: 6px; font-size: 12px; }
+.review-panel label { flex-direction: row; align-items: center; font-size: 11px; }
+.review-panel button, .review-panel input { font-size: 11px; }
+.review-panel .hint { width: 100%; margin: 0; }
+#review-dialog { width: min(580px, 94vw); }
+#review-dialog input { width: 100%; }
+#review-settings-message { font-size: 12px; color: #a65720; margin: 12px 0; }
+.matrix-note-head .problem-lights { margin-left: auto; }
+.matrix-note-head .excerpt-label { margin-left: 0; }
+.matrix-note-head .star-button { width: 16px; height: 16px; font-size: 13px; }
+.matrix-note-head .review-check { width: 15px; height: 16px; font-size: 11px; }
+.matrix-note-head .due-indicator { font-size: 12px; }

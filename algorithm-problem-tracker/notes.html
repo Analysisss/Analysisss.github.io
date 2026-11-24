@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>算法笔记 · 刷题手记</title>
+<link rel="stylesheet" href="./journal.css"><link rel="stylesheet" href="./vendor/katex/katex.min.css"><link rel="stylesheet" href="./journal-notes.css">
+<script defer src="./kramed.min.js"></script><script defer src="./vendor/katex/katex.min.js"></script><script defer src="./journal-markdown.js"></script><script defer src="./journal-copy.js"></script><script defer src="./journal-core.js"></script><script defer src="./journal-notes-core.js"></script><script defer src="./journal-notes-app.js"></script><link rel="stylesheet" href="./journal-find.css"><script defer src="./journal-find.js"></script></head>
+<body><header class="notes-top"><a href="./">← 刷题手记</a><strong>算法笔记</strong><span>把题目串成自己的讲解</span><button id="new-note" class="primary">＋ 新建笔记</button></header>
+<div class="notes-shell"><aside class="notes-sidebar"><h2>我的笔记</h2><input id="note-search" type="search" aria-label="搜索笔记" placeholder="搜索笔记标题…"><nav id="notes-list" aria-label="算法笔记列表"></nav><p class="hint">题目引用默认读取最新题解；导出完整 Markdown 可保留当前版本。</p></aside>
+<main class="notes-main"><div class="notes-actions"><button id="toggle-write">阅读模式</button><button id="refresh-problems">更新引用</button><button id="copy-note">复制完整 Markdown</button><button id="export-note">导出完整 Markdown</button><button id="source-note">下载引用源文</button><button id="save-note" class="primary">保存 · Ctrl Enter</button></div>
+<label class="note-title-label">笔记标题<input id="note-title" placeholder="例如：异或，从性质到线性基" maxlength="300"></label>
+<div id="note-status" role="status" aria-live="polite"></div>
+<section class="note-insert"><label>插入题目<input id="problem-search" type="search" placeholder="搜索题名、题号或粘贴原题链接"></label><select id="problem-choice" aria-label="选择题目"></select><button id="insert-problem">插入到光标位置</button></section>
+<p class="note-help hint">按自己的顺序写讲解，在独立一行粘贴原题链接，即可展开“一句话总结 + 题解”。支持公式、表格和代码。行内链接保持普通链接。</p>
+<div class="note-workspace"><label class="note-source">Markdown 讲解<textarea id="note-body" spellcheck="false" placeholder="## 核心观察&#10;&#10;写下你的理解，再插入一道例题…"></textarea></label><section class="note-render"><div class="preview-heading">完整笔记预览 <span id="reference-count"></span></div><article id="note-preview" class="prose"></article></section></div>
+</main></div></body></html>
